@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/DannyBoy.unity
+- path: Assets/Scenes/AlexanderBoy.unity
   isLoaded: 1
   isActive: 1
