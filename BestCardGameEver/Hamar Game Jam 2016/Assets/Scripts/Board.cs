@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Board : MonoBehaviour {
-
     public Lane lane1;
     public Lane lane2;
     public Lane lane3;
