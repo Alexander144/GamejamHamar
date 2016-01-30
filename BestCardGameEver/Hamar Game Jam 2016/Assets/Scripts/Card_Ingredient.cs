@@ -9,7 +9,4 @@ public class Card_Ingredient : Card {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
 }
