@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Minion : MonoBehaviour {
+public class Puppet : MonoBehaviour {
     private string _name;
     private int _HP;
     private int _attack;
     private int _currentHP;
     private string _type;
 
-    public Minion()
+    private int _direction;
+    private int _x;
+    private int _y;
+
+    public Puppet()
     {
         _name = "";
         _HP = 0;
@@ -17,7 +21,7 @@ public class Minion : MonoBehaviour {
         _type = "";
     }
 
-    //getters
+    //-----------------getters
     public string GetName()
     {
         return _name;
@@ -30,8 +34,20 @@ public class Minion : MonoBehaviour {
     {
         return _HP;
     }
+    public int GetDirection()
+    {
+        return _direction;
+    }
+    public int GetX()
+    {
+        return _x;
+    }
+    public int GetY()
+    {
+        return _y;
+    }
 
-    //setters
+    //------------setters
     public void SetName(string newName)
     {
         _name = newName;
@@ -44,5 +60,16 @@ public class Minion : MonoBehaviour {
     {
         _HP = newHP;
     }
-
+    public void SetX(int x)
+    {
+        _x = x;
+    }
+    public void SetY(int y)
+    {
+        _y = y;
+    }
+    public void SetDirection(int direction)
+    {
+        _direction = direction;
+    }
 }
