@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Puppet_Friendly : Puppet {
 
-    public C_Villain vil = new C_Villain();
-    public Puppet_Enemy enemy = new Puppet_Enemy();
+    //public C_Villain vil = new C_Villain();
+    //public Puppet_Enemy enemy = new Puppet_Enemy();
     public Puppet_Friendly ()
     {
         
@@ -25,21 +25,20 @@ public class Puppet_Friendly : Puppet {
         if (coll.collider.tag == "Enemy")
         {
  
-            if (GetAttack() >= enemy.GetCurrentHP()) //mer attack enn enemy HP
+           /* if (GetAttack() >= enemy.GetCurrentHP()) //mer attack enn enemy HP
             {
-                Destroy(coll.gameObject);
-                SetCurrentHP(GetCurrentHP() - enemy.GetAttack());
-                Debug.Log(GetCurrentHP());
-            }
+               */ Destroy(this.gameObject);
+               // SetCurrentHP(GetCurrentHP() - enemy.GetAttack());
+                //Debug.Log(GetCurrentHP());
+            /*}
             else // mindre attack enn enemy HP
             {
                 enemy.SetCurrentHP(enemy.GetCurrentHP() - GetAttack());
-            }
+            }*/
         }
         else if (coll.collider.tag == "Villain")
         {
-            Debug.Log("Livet til villain "+ vil.GetHP() );
-            vil.SetCurrentHP(vil.GetCurrentHP() - GetAttack());
+	        C_Villain.health -= GetAttack();
             Destroy(this.gameObject);
         }
     }

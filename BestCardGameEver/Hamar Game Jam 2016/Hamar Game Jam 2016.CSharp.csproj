@@ -81,6 +81,8 @@
     <Compile Include="Assets\Scripts\Puppet.cs" />
     <Compile Include="Assets\Scripts\Puppet_Enemy.cs" />
     <Compile Include="Assets\Scripts\Puppet_Friendly.cs" />
+    <Compile Include="Assets\Scripts\SpawnCard.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

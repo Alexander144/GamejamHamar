@@ -27,7 +27,7 @@ public class CookBook : MonoBehaviour
 			pressed = true;
 			CombineButton.GetComponent<Button>().onClick.AddListener(() =>
 			{
-				if (CombineSlot1.transform.childCount >= 1 && CombineSlot2.transform.childCount >= 1)
+				if (CombineSlot1.transform.childCount >= 1 && CombineSlot2.transform.childCount >= 1 && (CombineSlot1.gameObject.transform.GetChild(0).gameObject.transform.tag == "Skull" && CombineSlot2.gameObject.transform.GetChild(0).gameObject.transform.tag == "Flesh") || (CombineSlot1.gameObject.transform.GetChild(0).gameObject.transform.tag == "Flesh" && CombineSlot2.gameObject.transform.GetChild(0).gameObject.transform.tag == "Skull"))
 				{
 					Destroy(CombineSlot1.gameObject.transform.GetChild(0).gameObject);
 					Destroy(CombineSlot2.gameObject.transform.GetChild(0).gameObject);
